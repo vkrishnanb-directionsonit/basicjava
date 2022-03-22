@@ -1,0 +1,60 @@
+  public class FaceBookPage
+  {
+	public Account userAccount;
+    public Wall accountUserWall;
+	public List<Feed> userFeeds;
+	public List<Notification> userNotifications;
+	public List<Request> friendRequests;
+	public List<Account> friends;
+	public List<Account> followers;
+	public List<Accounts> following;
+	public List<Accounts> blockedAccounts;
+	public List<Accounts> unfriendedAccounts;
+	public List<Group> accountGroups;
+	public List<Video> myStories;
+	public List<Video> myFollowersStories;
+	public List<Post> myPosts;
+	public List<Post> likedPosts; // thumbs UP
+	public List<Post> unlikedPosts; // thumbs down
+	public List<Post> lovedPosts; 
+	public List<Post> wowPosts;
+	public List<Post> hiddenPosts;
+	public List<Post> sharedPosts; 
+	public List<Post> savedPosts;	
+	public List<Post> myMemories;
+	public Date lastactiveTime;
+	----------
+	public List<Account> findPeople(String firstName)
+	{
+	   return null;
+	}
+	public void reportAnAccount(Account account, String reason)
+	{
+	}
+	public void reacteToPost(Post post)
+	{
+		
+	}
+	public void denyFriendRequest(Account account)
+	{
+	   // logic to reject request goes here
+	}
+	public void acceptFriend(Account account)
+	{
+	   friends.add(account);
+	}
+	public void unFriend(Account account)
+	{
+	   friends.remove(account);
+	}
+  }
+  public class Account
+  {
+     public String emailaddress;
+	 public String password;
+	 public Date dateOfJoining;
+	 public Status_enum accountStatus;
+	 public Setting accountSettings;
+	 public Image degitalProfileImage;
+	 public String address;
+  }

@@ -1,0 +1,23 @@
+abstract class ShapeFactory
+{
+  protected abstract Shape create();
+   public static final Shape createShape()
+  {
+	  return null;
+  }
+  public static final Shape createShape(String str)
+  {
+	  ShapeFactory f=null;
+      try
+      {
+      f=(ShapeFactory)Class.forName(str).newInstance();
+      } catch(ClassNotFoundException e)
+      {
+        throw new RuntimeException("Bad shape creation: ");
+      }
+    return f.create();
+
+  }
+
+}
+

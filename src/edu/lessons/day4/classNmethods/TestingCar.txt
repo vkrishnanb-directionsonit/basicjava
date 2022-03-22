@@ -1,0 +1,109 @@
+import java.io.*;
+import java.util.*;
+class Car
+{
+String regno,make,color,fuel,type,manufacturer,owner;
+int model;
+//Constructor
+Car(String r,String m,String c,String f,String t,String mf,String o,int ml)
+{
+regno=r;
+make=m;
+color=c;
+fuel=f;
+type=t;
+manufacturer=mf;
+owner=o;
+model=ml;
+System.out.println("About CAR:\nRegistration number:"+regno+"\nMake:"+make+"\nColor:"+color+"\nFuel:"+fuel+"\nType:"+type+"\nManufacturer:"+manufacturer+"\nOwner:"+owner+"\nModel:"+model); 
+}
+
+//Methods
+public void Start()
+{
+System.out.println("CAR STARTED!!");
+}
+
+void Move(String direction)
+{
+if(direction.equals("fwd"))
+System.out.println("Car moving Forward");
+else
+System.out.println("Car moving backward");
+}
+
+
+void Turn(String direction)
+{
+if(direction.equals("left"))
+System.out.println("Car takes a turn in left direction");
+else
+System.out.println("Car takes a turn in right direction");
+}
+
+void InSpeed(int speed)
+{
+System.out.println("Speed increased by"+speed+"km/hr");
+}
+
+void DecSpeed(int speed)
+{
+System.out.println("Speed decreased by"+speed+"km/hr");
+}
+}
+
+class TestingCar
+{
+public static void main(String[] args)
+{
+String op,s="yes";
+int is,ds,c;
+Scanner in=new Scanner(System.in);
+Car a=new Car("TN23BC3581 ","Fiesta ","Red ","Diesel ","dom ","Ford ","Akshaya ",2008);
+
+
+System.out.println("Do you want to start your car(yes/no):"); 
+op=in.nextLine();
+
+if(op.equals(s))
+{
+a.Start();
+loop:for(;;)
+{
+System.out.println("Press 1>Move 2>Turn 3>increase speed 4>decrease speed 5>stop");
+c=in.nextInt();
+
+switch(c)
+{
+case 1:
+System.out.println("Direction(fwd/bwd):");
+String mdir=in.nextLine();
+a.Move(mdir);
+continue loop;
+case 2:
+System.out.println("Direction(left/right):");
+String tdir=in.nextLine();
+a.Turn(tdir);
+continue loop;
+case 3:
+System.out.println("How much speed do u want to increase?");
+is=in.nextInt();
+a.InSpeed(is);
+continue loop;
+case 4:
+System.out.println("How much speed do u want to decrease?");
+ds=in.nextInt();
+a.DecSpeed(ds);
+continue loop;
+case 5:
+System.exit(0);
+}//End of switch
+}//End of for loop
+}//End of if condition 
+else
+{
+System.out.println("Car not started.Exiting..");
+System.exit(0);
+}
+}//End of main method
+}//End of TestingCar class

@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<!DOCTYPE Address SYSTEM "address.dtd" >
+<!-- Sample XML Page -->
+<Address>
+ 	<name >venkat</name>
+	<name type="last">Krishnan</name>
+	<name type="middle">b</name>
+	<phone>91-044
+		<mobile>12321</mobile>
+		<land>4	&lt; 1000
+			<![CDATA[100<200 ]]>
+		</land>
+	</phone>
+	<email id="a1@yahoo.com" aid="abc@xyz"/>
+</Address>

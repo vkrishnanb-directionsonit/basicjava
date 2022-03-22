@@ -1,0 +1,19 @@
+"hello there parts is an anagram of strap and traps. 
+Moreover 24 is 42. Please stop for pots."
+
+//The pot is in the top floor. He saw what was a good film.
+	//hello the word parts is an anagram of strap and traps.
+	//Moreover 24 is 42. Please stop for pots
+	
+	String s1="The pot is in the top floor."+
+	" He saw what was a good film."+
+	" hello the word parts is an anagram of strap and traps."+
+	" Moreover 24 is 42. Please stop for pots";
+
+OUTPUT:
+parts strap traps
+24 42
+stop pots
+
+
+.

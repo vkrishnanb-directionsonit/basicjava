@@ -1,0 +1,11 @@
+java.util.Arrays
+
+Methods
+	Arrays.sort(data);
+	Arrays.fill(data, 2, 6, -1);
+	int index = Arrays.binarySearch(data, -9);
+===============================
+A hospital has been given the responsibility to vaccinate people above 18 years old.
+Each vial contains vaccines for 3 people.
+The hospital is given 100 vials every day.
+Create the necessary classes to show record of vaccination for a week.

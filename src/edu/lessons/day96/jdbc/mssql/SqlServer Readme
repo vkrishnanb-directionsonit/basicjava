@@ -1,0 +1,34 @@
+
+start C:\Windows\System32\SQLServerManager11.msc  ( for SQL Server 2012)
+		SQLServerManager15.msc( for SQL Server 2019 )
+
+Enable TCP/IP protocol from SQL Server Network config
+
+Restart Sql Server Instance
+
+Now check the IP address of SQLServer Instance by
+	Right click on TCP/IP option under Protocols
+	Proterties --> IP Adresses Tab --> Navigate down to "IPAll"
+	And note down the TCP Dynamic Ports Number 
+	This is the port to be used in the connection string
+=============================
+Add the jDTS.jar file  as Library to eclipse "Add external jar"
+SQLException:  I/O Error: SSO Failed: Native SSPI library not loaded. Check the java.library.path system property.
+
+copy ntlmauth.dll (64 bit) from ..\jtds-1.3.1-dist\x64\SSO\ to 
+C:\Program Files\Java\jre1.8.0_111\bin
+====================================
+15 Aug 2021
+-----------
+Download the sqljdbc_9.4.0.0_enu.zip from Microsoft Site
+https://docs.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15
+Extract sqljdbc_<version>_enu.zip
+Enter an extract directory when prompted; it is recommended that you unpack
+   this zip file in %ProgramFiles% with the default directory:   
+
+Add the mssql-jdbc-9.4.0.jre16.jar file  as Library to eclipse "Add external jar"
+
+When using Windows Authentication Integrated Security
+	copy sqljdbc_4.0/enu/auth/x64/sqljdbc_auth.dll to
+	Java/jre7/bin and to
+	Java/jre7/lib

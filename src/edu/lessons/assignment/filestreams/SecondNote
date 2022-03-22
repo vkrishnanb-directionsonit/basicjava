@@ -1,0 +1,19 @@
+CUI - Menu, Scanner
+
+BusinessController -
+	Collection (HashSet)
+	----------Methods--------
+	addDataToCollection()
+	saveDataToFile()
+	loadFile() -> load data from file to the collection
+	displayDatafromCollection()
+	modifyValueInThecollection()
+
+Entity	implement Comparer
+   properties - getter/setter
+   ---
+   equals()
+   hashCode()
+   toString()
+   compare()
+	

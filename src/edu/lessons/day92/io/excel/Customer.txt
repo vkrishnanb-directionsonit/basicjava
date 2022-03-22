@@ -1,0 +1,5 @@
+#Store into File
+#Fri Jan 19 14:18:38 IST 2018
+cust3=177
+cust2=176
+cust1=175

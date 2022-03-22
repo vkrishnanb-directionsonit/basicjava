@@ -1,0 +1,6 @@
+Functions of the call stack
+
+	Storing the return address 
+	Local data storage 
+	Parameter passing 
+	Pointer to current instance 

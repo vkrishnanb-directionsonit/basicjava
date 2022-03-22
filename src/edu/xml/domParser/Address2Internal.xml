@@ -1,0 +1,30 @@
+<?xml version='1.0'?>
+<!DOCTYPE Address [
+<!ELEMENT Address (name*,(city|State)?,phone,email+) >
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT city (#PCDATA) >
+<!ELEMENT state (#PCDATA) >
+<!ELEMENT phone (#PCDATA|mobile|land)* >
+<!ELEMENT mobile (#PCDATA) >
+<!ELEMENT land (#PCDATA) >
+<!ELEMENT email EMPTY >
+<!ATTLIST email id CDATA #REQUIRED aid CDATA #IMPLIED >
+<!ATTLIST name type (first | middle | last) "first" >
+<!ATTLIST phone city CDATA #FIXED "chennai" >
+]  >
+
+<!-- Sample XML Page -->
+<Address>
+	<name >venkat</name>
+	<name type="last">Krishnan</name>
+	<name type="middle">b&amp;#169;
+	<!--[CDATA mysample Code < for CDATA]-->	
+	</name>
+	<phone>91-044
+	   <mobile>1222312321&#169;1000</mobile>
+	   <land>43543543&lt;1000</land>
+	</phone>
+	<email id="a1@yahoo.com" aid="abc@xyz"/>
+	
+</Address>
+

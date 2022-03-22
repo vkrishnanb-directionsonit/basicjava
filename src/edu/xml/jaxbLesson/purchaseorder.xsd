@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.mybank.com/schema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.mybank.com/schema" elementFormDefault="qualified">
+	<xsd:element name="billingaddress">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="name"/>
+				<xsd:element ref="street"/>
+				<xsd:element ref="city"/>
+				<xsd:element ref="state"/>
+				<xsd:element ref="zip"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="city" type="xsd:string"/>
+	<xsd:element name="date" type="xsd:string"/>
+	<xsd:element name="description" type="xsd:string"/>
+	<xsd:element name="identifier" type="xsd:string"/>
+	<xsd:element name="item">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="quantity"/>
+				<xsd:element ref="productnumber"/>
+				<xsd:element ref="description"/>
+				<xsd:element ref="unitcost"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="items">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="item" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="name" type="xsd:string"/>
+	<xsd:element name="productnumber" type="xsd:string"/>
+	<xsd:element name="purchaseorder">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="identifier"/>
+				<xsd:element ref="date"/>
+				<xsd:element ref="billingaddress"/>
+				<xsd:element ref="items"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="quantity" type="xsd:int"/>
+	<xsd:element name="state" type="xsd:string"/>
+	<xsd:element name="street" type="xsd:string"/>
+	<xsd:element name="unitcost" type="xsd:decimal"/>
+	<xsd:element name="zip" type="xsd:string"/>
+</xsd:schema>

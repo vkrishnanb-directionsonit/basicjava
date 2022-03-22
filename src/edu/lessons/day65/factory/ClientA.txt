@@ -1,0 +1,23 @@
+class ClientA
+{
+   static IOrderFactory factory;
+  public static void main(String args[])
+  {
+    try{
+			setFactory(args[0]);
+			IOrder iorder = factory.createOrder();
+			iorder.getProduct();
+			iorder.getPrice();
+		}catch(Exception e){	System.out.println("Error "+e);	}
+	}
+	public static void setFactory(String factoryName)
+	{
+		try
+		{
+			Class c=Class.forName(factoryName);
+			factory=(IOrderFactory)c.newInstance();
+		}catch(Exception err){
+			System.out.println("Error in setfactory "+err);
+		}
+	}
+}

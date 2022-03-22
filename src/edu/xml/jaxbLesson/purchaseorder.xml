@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<purchaseorder xmlns="http://www.mybank.com/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:po="http://www.mybank.com/schema" xsi:schemaLocation="http://www.mybank.com/schema purchaseorder.xsd">
+	<identifier>876564</identifier>
+	<date>29 October 2002</date>
+	<billingaddress>
+		<name>John Malkovich</name>
+		<street>256 Eight Bit Lane</street>
+		<city>Burlington</city>
+		<state>MA</state>
+		<zip>01803-6326</zip>
+	</billingaddress>
+	<items>
+		<item>
+			<quantity>3</quantity>
+			<productnumber>229AXH</productnumber>
+			<description>High speed photocopier machine with automatic sensors</description>
+			<unitcost>1939.99</unitcost>
+		</item>
+		<item>
+			<quantity>1</quantity>
+			<productnumber>1632</productnumber>
+			<description>One box of color toner cartidges</description>
+			<unitcost>43.95</unitcost>
+		</item>
+	</items>
+</purchaseorder>

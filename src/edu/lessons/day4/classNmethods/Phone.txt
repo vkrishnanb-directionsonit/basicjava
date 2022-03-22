@@ -1,0 +1,19 @@
+
+Phone
+
+  No
+  Model
+  Plan
+  Type
+  Memory
+ -----------
+  makeACall(no):void
+  receiveACall(no):void
+  sendSMS(no,msg):void
+  receiveMSG(no):String
+  addContact(no,name):void
+  findContact(no):String
+  removeContact(no):void
+
+TestPhone
+	p s v main(......)

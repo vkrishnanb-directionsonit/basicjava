@@ -1,0 +1,10 @@
+<!ELEMENT Address (name+,phone,email) >
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT phone (#PCDATA|mobile|land)* >
+<!ELEMENT mobile (#PCDATA) >
+<!ELEMENT land (#PCDATA) >
+<!ELEMENT email EMPTY >
+<!ATTLIST email id CDATA #REQUIRED
+		aid CDATA #IMPLIED >
+<!ATTLIST name type (first | middle | last) "first" >
+<!ATTLIST phone city CDATA #FIXED "chennai" >

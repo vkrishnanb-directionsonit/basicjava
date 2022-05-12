@@ -5,7 +5,7 @@ class Vectordemo
 {
 	public static void main(String args[])
 	{
-		// Initial size is 3 increment it by 2
+		// Initial capacity is 3 increment it by 2
 		Vector<Integer> v=new Vector<Integer> (3,2);
 		System.out.println("Initial size :"+v.size());
 		System.out.println("Initial capacity :"+v.capacity());

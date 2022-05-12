@@ -94,6 +94,38 @@ public class ConnectionHelper
   		 }
   		return con;
   	}
+  //Oracle - 
+  // TODO
+  	public static Connection getOrclConnection()
+  	{
+  	    Connection con =null;
+  	    String MYSQL_DRIVERNAME="tobe provided";
+    	String MYSQL_CONNECTION_URL="jdbc:oracle://localhost:1521@XE";
+    	String strUserName="system";
+    	String strPassword="password";
+  	    try
+  		{
+  			java.util.Properties p = new java.util.Properties();
+  			p.put("user",strUserName);
+  			p.put("password",strPassword);
+  			String driverName=MYSQL_DRIVERNAME;
+  			Class.forName(driverName);
+  			String url=MYSQL_CONNECTION_URL;
+  			con= DriverManager.getConnection(url,p);
+  			boolean flag=con.isClosed();
+  			if(!flag)
+  			    System.out.println("Connection Open ");
+  			else
+  				System.out.println("Connection Closed ");
+  		 }catch (SQLException sqe)
+  		 {
+  			System.out.println("SQLException:  " + sqe.getMessage());
+  		 }catch (Exception e2)
+  		 {
+  			System.out.println("Exception:  " + e2.getMessage());
+  		 }
+  		return con;
+  	}
 
 	public static void cleanup(Connection con,java.sql.PreparedStatement ps)
 	{

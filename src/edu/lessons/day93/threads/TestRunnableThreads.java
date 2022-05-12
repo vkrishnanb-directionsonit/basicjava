@@ -1,11 +1,12 @@
 package edu.lessons.day93.threads;
-public class MultiThreadsDemo
+public class TestRunnableThreads
 {
 	public static void main(String args[])
 	{
 		checkingStateofThreads();
 	}
-	public static void runningMultiThreads()
+	// Runnable Thread
+	public static void runningMultipleRunnableThreads()
 	{
 		try
 		  {
@@ -23,6 +24,7 @@ public class MultiThreadsDemo
 			 System.out.println("ERROR!!! "+e.getMessage());
 	     }
 	}
+	
 	public static void multiThreadsonSameObject()
 	{
 		try
@@ -127,7 +129,6 @@ public class MultiThreadsDemo
 		  	try {
 				Thread.sleep(3000);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		System.out.println("T1 State "+t1.getState());
@@ -136,7 +137,6 @@ public class MultiThreadsDemo
 			t1.join();
 		  	t2.join();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println("T1 State "+t1.getState());

@@ -12,7 +12,7 @@ public class Writeobj
 	java.util.Scanner scanner=null;
 	try
 	{
-		fos=new FileOutputStream ("c:\\temp\\emp1.dat") ;
+		fos=new FileOutputStream ("d:\\temp\\emp1.dat") ;
 		oos=	new ObjectOutputStream(fos) ;
 		 scanner=new java.util.Scanner(System.in);
 		System.out.println("Enter Emp ID");

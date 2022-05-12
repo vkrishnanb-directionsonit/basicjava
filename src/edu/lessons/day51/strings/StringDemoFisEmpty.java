@@ -12,16 +12,17 @@ public class StringDemoFisEmpty
 	}
 	public static void verifyString(String s1)//verify and print
 	{		
-		  if(null!=s1)
+		  if(null==s1)
 		  {
-		   System.out.print("String is NotNull ");
-		   
-		   if(!s1.isEmpty())
-			  System.out.println("\t Not Empty "+s1.toString());
-			else
-		  	  System.out.println("\t String is Empty");
-	      }
+		   System.out.print("String is Null ");
+		   return ;
+		  }
 		  else
-		  	System.out.println("String is Null");
+		  	System.out.println("String is NOT Null");
+			
+		if(!s1.isEmpty())
+			System.out.println("\t Not Empty "+s1.toString());
+		else
+			System.out.println("\t String is Empty");		  
 	}
 }

@@ -13,6 +13,11 @@ public class ShapeAPrivateConstructor {
 		height=x;width=x;
 		System.out.println(x+" ShapeA CreatedB "+hashCode());
 	}
+	public void echo()
+	{
+		System.out.println("ShapeA ECHO....");
+		System.out.println(height+ " "+ width);
+	}
 	public static ShapeAPrivateConstructor getObject()// factory method
 	{
 		return new ShapeAPrivateConstructor(); // call to private constructor

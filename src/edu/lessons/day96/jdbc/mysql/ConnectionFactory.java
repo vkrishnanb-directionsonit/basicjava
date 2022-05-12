@@ -4,12 +4,12 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-import com.mysql.cj.jdbc.MysqlDataSource;
+//import com.mysql.cj.jdbc.MysqlDataSource;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
-import org.apache.commons.dbcp2.BasicDataSource;
+//import org.apache.commons.dbcp2.BasicDataSource;
 public class ConnectionFactory
 {
     //MYSQL
@@ -68,60 +68,60 @@ public class ConnectionFactory
   	public static Connection getMYSQLWorldConnectionFromPool()
   	{
   		Connection con =null;
-    	String mysqlconnectionurl="jdbc:mysql://localhost:3306/world";
-    	String strUserName="root";
-    	String strPassword="Pass123$";
-		BasicDataSource mysqlDS = null;
-    	 try
-   		{
-   			String url=mysqlconnectionurl;
-   			mysqlDS = new BasicDataSource();
-			mysqlDS.setUrl(url);
-			mysqlDS.setUsername(strUserName);
-			mysqlDS.setPassword(strPassword);
-			mysqlDS.setMinIdle(5);
-	        mysqlDS.setMaxIdle(10);
-	        mysqlDS.setMaxTotal(25);
-			con=mysqlDS.getConnection();
-   		 }catch (Exception e2)
-   		 {
-   			System.out.println("Exception:  " + e2.getMessage());
-   		 }
+//    	String mysqlconnectionurl="jdbc:mysql://localhost:3306/world";
+//    	String strUserName="root";
+//    	String strPassword="Pass123$";
+//		BasicDataSource mysqlDS = null;
+//    	 try
+//   		{
+//   			String url=mysqlconnectionurl;
+//   			mysqlDS = new BasicDataSource();
+//			mysqlDS.setUrl(url);
+//			mysqlDS.setUsername(strUserName);
+//			mysqlDS.setPassword(strPassword);
+//			mysqlDS.setMinIdle(5);
+//	        mysqlDS.setMaxIdle(10);
+//	        mysqlDS.setMaxTotal(25);
+//			con=mysqlDS.getConnection();
+//   		 }catch (Exception e2)
+//   		 {
+//   			System.out.println("Exception:  " + e2.getMessage());
+//   		 }
     	return con;
   	}
   	
   	public static Connection getMYSQLDSConnectionUsingPropertyFile()
   	{
   		Connection con =null;
-  		FileInputStream dbpropertiesStream = null;
-  		String propertiespath="c:\\temp\\db.properties";
-  		Properties dbproperties =null;
-  		String mysqlconnectionurl="MYSQL_DB_URL";
-    	String strUserName="MYSQL_DB_USERNAME";
-    	String strPassword="MYSQL_DB_PASSWORD";
-		MysqlDataSource mysqlDS = null;
-    	 try
-   		{
-    		dbpropertiesStream=new FileInputStream(propertiespath); 
-   			mysqlDS = new MysqlDataSource();
-   			dbproperties =  new Properties();
-   			dbproperties.load(dbpropertiesStream);
-			mysqlDS.setURL(dbproperties.getProperty(mysqlconnectionurl));
-			mysqlDS.setUser(dbproperties.getProperty(strUserName));
-			mysqlDS.setPassword(dbproperties.getProperty(strPassword));
-			con=mysqlDS.getConnection();
-   		 }catch (Exception e2)
-   		 {
-   			System.out.println("Exception:  " + e2.getMessage());
-   		 }
-    	 finally
-    	 {
-    		 try {
-				dbpropertiesStream.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-    	 }
+//  		FileInputStream dbpropertiesStream = null;
+//  		String propertiespath="c:\\temp\\db.properties";
+//  		Properties dbproperties =null;
+//  		String mysqlconnectionurl="MYSQL_DB_URL";
+//    	String strUserName="MYSQL_DB_USERNAME";
+//    	String strPassword="MYSQL_DB_PASSWORD";
+//		MysqlDataSource mysqlDS = null;
+//    	 try
+//   		{
+//    		dbpropertiesStream=new FileInputStream(propertiespath); 
+//   			mysqlDS = new MysqlDataSource();
+//   			dbproperties =  new Properties();
+//   			dbproperties.load(dbpropertiesStream);
+//			mysqlDS.setURL(dbproperties.getProperty(mysqlconnectionurl));
+//			mysqlDS.setUser(dbproperties.getProperty(strUserName));
+//			mysqlDS.setPassword(dbproperties.getProperty(strPassword));
+//			con=mysqlDS.getConnection();
+//   		 }catch (Exception e2)
+//   		 {
+//   			System.out.println("Exception:  " + e2.getMessage());
+//   		 }
+//    	 finally
+//    	 {
+//    		 try {
+//				dbpropertiesStream.close();
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			}
+//    	 }
     	return con;
   	}
 

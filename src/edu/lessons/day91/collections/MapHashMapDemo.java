@@ -12,15 +12,7 @@ class MapHashMapDemo
 {
   public static void main(String args[])
   {
-	  // usingRawMap();
-	  // usingGenericMap();
-	 
-	  List<String> stringlist=new ArrayList<String>();
-	  stringlist.add("John");
-	  stringlist.add("Suresh");
-	  stringlist.add("Ramesh");
-	  stringlist.add("Ellango");
-	  usingGenericMapDemoB(stringlist);
+	  usingGenericMapDemoA();
     }
   @SuppressWarnings({ "rawtypes", "unchecked", "removal" })// TODO
   public static void usingRawMap()
@@ -47,6 +39,7 @@ class MapHashMapDemo
 	      System.out.println(mapEntry.getValue());
 	    }
   }
+  
   public static void usingGenericMapDemoA()
   {
 	HashMap<String,String> secondMap=new HashMap<String,String>();
@@ -55,6 +48,7 @@ class MapHashMapDemo
 	secondMap.put("k2", "ABcd");
 	secondMap.put("k3", "ABcd");
 	secondMap.put("k4", "ABcd");
+	secondMap.put("k4", "Xyz");// replace the previous value
 	System.out.println("Size "+secondMap.size());
 	Set<Map.Entry<String,String>> setofMapEntry = 
 			secondMap.entrySet();
@@ -68,6 +62,10 @@ class MapHashMapDemo
       System.out.println(mapEntry.getValue());
     }
   }
+  
+  
+  
+  
   @SuppressWarnings("unchecked") //TODO
   public static <T> void usingGenericMapDemoB( Collection<T> c)
   {

@@ -6,7 +6,7 @@ public class TestFileOperator
 {
 	public static void main(String[] args) //throws IOException
 	{
-		Fileoperations fileoperator=new Fileoperations();
+		FileOperations fileoperator=new FileOperations();
 		fileoperator.renameFile();
 		//f1.createFileUsingFileWriterClass();
 		//f1.appendData2File();

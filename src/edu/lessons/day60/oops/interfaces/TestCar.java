@@ -8,7 +8,7 @@ public class TestCar {
 	   String s1="HelloCar";
 	   m2(s1);
 	}
-	public static void m1()
+	public static void testVehicle()
 	{
 		IVehicle v1;//=new IVehicle();
 		v1=new VehicleCar();
@@ -19,7 +19,10 @@ public class TestCar {
 		// type cast the Object to the Car class
 		VehicleCar c1=(VehicleCar)v1;			
 		c1.park();
-	
+		v1 = new VehicleShip();
+		v1.echo();
+		v1.start();
+		v1.stop();
 	}
 	public static void m2(Object obj)
 	{

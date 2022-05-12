@@ -1,6 +1,6 @@
 package edu.lessons.day93.threads;
 
-public class TestMyThreadClass {
+public class TestWorkerThread {
 	public static void main(String[] args) {
 		Thread t1=Thread.currentThread();
 		try

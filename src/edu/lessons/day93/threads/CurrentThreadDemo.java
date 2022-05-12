@@ -1,5 +1,5 @@
 package edu.lessons.day93.threads;
-public class ThreadDemo
+public class CurrentThreadDemo
 {
 	public static void main(String args[])
 	{

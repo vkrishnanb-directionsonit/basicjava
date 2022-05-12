@@ -149,7 +149,7 @@ public class AddressBookController {
 		flag=contactfileaccesscontrol.saveChanges(path, filename, contactmap);
 		return flag;
 	}
-	public boolean undoChanges(){
+	public boolean undoChanges() throws IllegalCallerException{
 		throw new IllegalCallerException();
 	}
 	public boolean removeContactFromBook(int id){

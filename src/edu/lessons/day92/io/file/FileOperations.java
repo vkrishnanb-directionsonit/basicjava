@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
-public  class Fileoperations
+public  class FileOperations
 {
 	
  //private  String filename="CHECK.TXT";

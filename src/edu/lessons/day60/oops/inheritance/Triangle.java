@@ -12,10 +12,12 @@ public class Triangle extends Shape
 		super(y);
 		System.out.println("c2 Triangle Object Created "+hashCode());
 	}
+	// method override
 	public void show()
 	{
 		System.out.println("Triangle show");
 	}
+	// not polymorphic
 	public void echo()
 	{
 		super.show();

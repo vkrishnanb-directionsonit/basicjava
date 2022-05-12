@@ -3,7 +3,7 @@ package edu.lessons.day60.oops.inheritance;
 public class TestShape {
 	public static void main(String[] args) 
 	{
-		m5();
+		testPolymorphism();
 	}
 	public static void m1()
 	{
@@ -49,7 +49,7 @@ public class TestShape {
 		System.out.println("obj1.getClass() "+obj1.getClass().getName());
 	}
 	
-	public static void m5()
+	public static void testPolymorphism()
 	{
 		//Triangle t1=new Shape();
 		Shape s1=new Triangle();
@@ -57,7 +57,8 @@ public class TestShape {
 		s1.height=123;
 		s1.width=100;
 		s1.draw();//shape.draw -final method - not a virtual method
-		s1.show();// tri.Show - not a final method
+		s1.show();// tri.Show - not a final method - runtime polymorphism
+		// s1.echo();
 	}
 	public static void m6()
 	{

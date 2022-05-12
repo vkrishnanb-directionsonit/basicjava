@@ -2,8 +2,9 @@ package edu.lessons.day98.reflection;
 public class Actor
 {
 	public  String Name;
-	String city;
+	private String City;
 	protected  long pincode;
+	private int age;
 	
 	public Actor()
 	{
@@ -25,7 +26,7 @@ public class Actor
   }
   protected void printCity()
   {
-	 System.out.println(" printCity "+city);
+	 System.out.println(" printCity "+City);
   }
   private void printPincode()
   {

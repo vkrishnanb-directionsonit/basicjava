@@ -5,8 +5,8 @@ import java.util.Iterator;
 class DictionaryPropDemo {
   public static void main(String args[])
   {
-    Properties capitals = new Properties();
-    Set<Object> states;
+    Properties capitals = new Properties();//Properties<String> capitals = new Properties();
+    Set<Object> states; // Set<String> states
     String str;
     capitals.put("Illinois", "Springfield");
     capitals.put("Florida", "Tallahassee");
@@ -23,8 +23,8 @@ class DictionaryPropDemo {
              str + " is " +capitals.getProperty(str)+ ".");
     }
  // look for state not in list -- specify default
-    str = capitals.getProperty("Florida", "Not Found");
+    str = capitals.getProperty("TamilNadu", "Not Found");
     //str = capitals.getProperty("Florida");
-    System.out.println("The capital of Florida is "+ str);
+    System.out.println("The capital of TamilNadu is "+ str);
   }
 }

@@ -38,7 +38,7 @@ public class StringDemoA
 	
 	public static void creatingStringInaForLoop()
 	{
-		for(int i=0;i<10;i++)
+		for(int count=0;count<10;count++)
 		{
 			String s1="Hello";
 		}

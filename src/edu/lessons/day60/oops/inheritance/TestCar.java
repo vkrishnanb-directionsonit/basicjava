@@ -1,7 +1,6 @@
 package edu.lessons.day60.oops.inheritance;
 
 public class TestCar {
-
 	public static void main(String[] args) {
 		Car c1=new Car();
 		c1.Regno="TN10X1234";
@@ -16,5 +15,4 @@ public class TestCar {
 		Vehicle ae3=new Vehicle("TN22X5676");
 		Vehicle fer=new Vehicle("TN22X5675");
 	}
-
 }

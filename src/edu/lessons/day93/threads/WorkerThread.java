@@ -14,7 +14,7 @@ public class WorkerThread extends Thread {
 	   {
 		amount+=i;
 	    System.out.println(id+ "  " + amount);
-	    Thread.sleep(2000);
+//	    Thread.sleep(2000);
        }
 	  }catch(Exception e)
 	  {

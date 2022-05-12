@@ -17,15 +17,17 @@ public class StringDemoCTokenizer
 	   String[] data=trimmedString.split(" ");// firstString.trim().split(" ")
 	   int count = data.length;
 	   System.out.println("Word Count "+ count);
-	   for(int i=0;i<count;i++)
+	   for(int index=0;index<count;index++)
 	   {
-		   System.out.println(data[i]);
+		   System.out.println(data[index]);
 	   }
 	}
-	public static void stringTrim()
+	public static void testStringTrim()
 	{
 		String secondString="   Hope         it            rain          ";
+		System.out.println("Before Trim: "+secondString.length());
 		secondString=secondString.trim();
+		System.out.println("After Trim: "+secondString.length());
 		char[] c=secondString.toCharArray();
 		int wordcount=0;
 		for(int i=0;i<secondString.length()-1;i++)

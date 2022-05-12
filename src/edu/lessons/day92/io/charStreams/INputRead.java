@@ -10,7 +10,7 @@ public class INputRead
     System.out.println("Enter characters, 'q' to quit.");
     do
     {
-      c = (char) sr.read();
+      c = (char) sr.read();     
       System.out.println(c);
     } while(c != 'q');
   }

@@ -17,31 +17,57 @@ public class ArrayDequeDemo {
 		arraydeque.push("E");
 		arraydeque.push("F");
 		
-		/*System.out.println("**********Popping the stack: ");
-		while(adq.peek() != null)
-			System.out.print(adq.pop() + " ");*/
-		
-		System.out.println("*********Iterating the stack: ");
-		@SuppressWarnings("rawtypes")
-		Iterator iterator = arraydeque.iterator();
+//		System.out.println("Before Popping the stack: "+arraydeque.size());
+//		while(arraydeque.peek() != null)
+//			System.out.print(arraydeque.pop() + " ");
+//		
+//		System.out.println(" After Popping the stack: "+arraydeque.size());
+		Iterator<String> iterator = arraydeque.iterator();
 	    while(iterator.hasNext()) {
 	      System.out.println("\t"+iterator.next());
 	    }
 	    
-		System.out.println("************descendingIterator the stack: ");
 	    Iterator<String> striterator = arraydeque.descendingIterator();
 	    while(striterator.hasNext()) 
 	    {
 	      System.out.println("\t"+striterator.next());
 	    }
-	    System.out.println(arraydeque);
-	    System.out.println("************addFirst: H");
 	    arraydeque.addFirst("H");
-	    System.out.println(arraydeque);
-	    System.out.println("************addLast: I");
 	    arraydeque.addLast("I");
+	    iterator = arraydeque.iterator();
+	    while(iterator.hasNext()) {
+	      System.out.println("\t"+iterator.next());
+	    }
+	    //---
+	    //PollFirst - 
+	    //Retrieves and removes the first element of this deque, or
+	    //returns null if this deque is empty
+	    System.out.println("************pollFirst: "+arraydeque.pollFirst());
 	    System.out.println(arraydeque);
-	    
+	    System.out.println("************pollLast: "+arraydeque.pollLast());
+	    System.out.println(arraydeque);
+	    //---
+	    //peekFirst
+	    //Retrieves, but does not remove, the first element of this deque, or 
+	    //returns null if this deque is empty.
+	    System.out.println("************peekFirst: "+arraydeque.peekFirst());
+	    System.out.println(arraydeque);
+	    System.out.println("************peekLast: "+arraydeque.peekLast());
+	    System.out.println(arraydeque);
+	    //---
+	    //removeFirst
+	    //Retrieves and removes the first element of this deque. 
+	    //This method differs from pollFirst only in that it throws an exception 
+	    //if this deque is empty.
+	    System.out.println("************removeFirst: "+arraydeque.removeFirst());
+	    System.out.println(arraydeque);
+	    System.out.println("************removeLast: "+arraydeque.removeLast());
+	    System.out.println(arraydeque);
+	    //---
+	    System.out.println("*removeFirstOccurrence: X "+arraydeque.removeFirstOccurrence("X"));
+	    System.out.println(arraydeque);
+	    System.out.println("*removeLastOccurrence: Z "+arraydeque.removeLastOccurrence("Z"));
+	    System.out.println(arraydeque);
 	    //offerFirst
 	    //Inserts the specified element at the front of this deques
 	    /*
@@ -61,36 +87,5 @@ public class ArrayDequeDemo {
 	    System.out.println("************offerLast: K");
 	    arraydeque.offerLast("K");
 	    System.out.println(arraydeque);
-	   
-	    //PollFirst - 
-	    //Retrieves and removes the first element of this deque, or
-	    //returns null if this deque is empty
-	    System.out.println("************pollFirst: "+arraydeque.pollFirst());
-	    System.out.println(arraydeque);
-	    System.out.println("************pollLast: "+arraydeque.pollLast());
-	    System.out.println(arraydeque);
-	    
-	    //peekFirst
-	    //Retrieves, but does not remove, the first element of this deque, or 
-	    //returns null if this deque is empty.
-	    System.out.println("************peekFirst: "+arraydeque.peekFirst());
-	    System.out.println(arraydeque);
-	    System.out.println("************peekLast: "+arraydeque.peekLast());
-	    System.out.println(arraydeque);
-	    
-	    //removeFirst
-	    //Retrieves and removes the first element of this deque. 
-	    //This method differs from pollFirst only in that it throws an exception 
-	    //if this deque is empty.
-	    System.out.println("************removeFirst: "+arraydeque.removeFirst());
-	    System.out.println(arraydeque);
-	    System.out.println("************removeLast: "+arraydeque.removeLast());
-	    System.out.println(arraydeque);
-	    
-	    System.out.println("************peekFirst: X "+arraydeque.removeFirstOccurrence("X"));
-	    System.out.println(arraydeque);
-	    System.out.println("************peekLast: Z "+arraydeque.removeLastOccurrence("Z"));
-	    System.out.println(arraydeque);
-		System.out.println();
 	}
 }

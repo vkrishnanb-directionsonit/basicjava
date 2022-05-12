@@ -1,16 +1,17 @@
 package edu.lessons.day60.oops.interfaces;
 
-public class VehicleCar implements IVehicle 
+public class VehicleCar extends VehicleAbstract 
 {
 	@Override
 	public void echo() 
 	{
 		System.out.println("Car.Echo");
 	}
+
 	@Override
-	public void start() 
+	public void move() 
 	{
-		System.out.println("Car.Start");
+		System.out.println("Car.Move");
 	}
 	@Override
 	public void stop() 

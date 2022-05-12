@@ -1,56 +1,42 @@
 package edu.lessons.day91.collections;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.ListIterator;
 
 class ListIteratorDemo {
-  public static void main(String args[]) {
-    // create an array list
-    ArrayList al = new ArrayList();
-    
-    // add elements to the array list
-    String s1="B";
-    al.add("C");
-    al.add(s1);
-    al.add("A");
-    al.add("E");
-    al.add(s1);
-    al.add("D");
-    al.add("F");
-    al.add(s1);
-    
-    // use iterator to display contents of al
-    System.out.print("Original contents of al: ");
-    
-    Iterator itr = al.iterator();
-    while(itr.hasNext()) {
-      Object element = itr.next();//return current object
-     // Emp e1=(Emp)itr.next();
-      System.out.print(element + " ");
-    }
-    System.out.println();
-    System.out.println("Freq of [B] in ArrayList- "+Collections.frequency(al, "B"));
-    
-    // modify objects being iterated
-    ListIterator litr = al.listIterator(); 
-    while(litr.hasNext()) 
-    {
-      Object element = litr.next();
-      litr.set(element + "+");
-    }
-
-    System.out.print("Modified contents of al: ");
-    itr = al.iterator(); 
-    while(itr.hasNext()) {
-      Object element = itr.next();
-      System.out.print(element + " ");
-    }
-    System.out.println();
-
-    // now, display the list backwards
-    System.out.print("Modified list backwards: ");
-    while(litr.hasPrevious()) {
-      Object element = litr.previous();
-      System.out.print(element + " ");
-    }
-    System.out.println();    
-  }
+	public static void main(String args[]) {
+	    ArrayList<String> stringArrayList = new ArrayList<String>();
+	    String s1="B";
+	    stringArrayList.add("C");
+	    stringArrayList.add(s1);
+	    stringArrayList.add("A");
+	    stringArrayList.add("E");
+	    stringArrayList.add(s1);
+	    stringArrayList.add("D");
+	    stringArrayList.add("F");
+	    stringArrayList.add(s1);
+	    Iterator<String> string_itr = stringArrayList.iterator();
+	    while(string_itr.hasNext()) {      
+	      System.out.print(string_itr.next() + " ");
+	    }
+	    System.out.println();
+	    ListIterator<String> string_list_itr = stringArrayList.listIterator(); 
+	    while(string_list_itr.hasNext()) 
+	    {
+	      String element = string_list_itr.next();
+	      string_list_itr.set(element + "--");
+	    }
+	    string_itr = stringArrayList.iterator(); 
+	    while(string_itr.hasNext()) {
+	      Object element = string_itr.next();
+	      System.out.print(element + " ");
+	    }
+	    System.out.println();
+	    while(string_list_itr.hasPrevious()) {
+	        String element = string_list_itr.previous();
+	        System.out.print(element + " ");
+	      }
+	}
 }

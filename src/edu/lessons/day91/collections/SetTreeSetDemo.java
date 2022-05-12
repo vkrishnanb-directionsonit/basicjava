@@ -25,16 +25,15 @@ class SetTreeSetDemo {
 			ts.add("boy");	
 			ts.add("egg");		
 			ts.add("Fool");
-	    //System.out.println(ts);
 	    System.out.println("Size "+ts.size());
 	    Iterator<String> itr = ts.iterator();
 		 while(itr.hasNext())
 		 {
-		      Object element = itr.next();
-		      System.out.println(element );
+		      System.out.println(itr.next() );
 		 }
-
   }
+  
+  
   public static void demoB()
   {
 	  

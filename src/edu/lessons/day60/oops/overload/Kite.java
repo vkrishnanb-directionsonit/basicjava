@@ -25,7 +25,7 @@ public class Kite {
 	{
 		System.out.println("glide1 "+time);
 	}
-	void Glide(int time) 
+	void glide(double time) 
 	{
 		System.out.println("Glide 2 "+time);
 	}

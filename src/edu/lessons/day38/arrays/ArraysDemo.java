@@ -81,8 +81,7 @@ class ArraysDemo
 	    display(numberArray);
 	    System.out.println("After Sort -- The value -9 is at location ");
 	    index = Arrays.binarySearch(numberArray, -9);
-	    System.out.println(index);
-	   
+	    System.out.println(index);	   
   }
   public static void workingWithCharArray() 
   {

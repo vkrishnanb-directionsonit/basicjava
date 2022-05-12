@@ -2,28 +2,21 @@ package edu.lessons.day92.io.file;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-
-public class FileReader
+/**
+ * 
+ * @author Chainsys
+ * Programs use byte streams to perform input and output of 8-bit bytes. 
+ * All byte stream classes are descended from InputStream and OutputStream.
+ * To demonstrate how byte streams work, 
+ * we'll focus on the file I/O byte streams, FileInputStream and FileOutputStream. 
+ */
+public class FileInputStreamDemo
 {
   public static void main(String args[])
   {
     int charfromfile;
     FileInputStream fin=null;
-    //java.util.Scanner scanner=new java.util.Scanner(System.in);	
-	String fname="C:\\temp\\Readme.txt";
-	/*	
-	try {
-		System.out.println("Enter FileName with full path");
-		fname = scanner.nextLine();
-	} 
-	catch(Exception e)
-	{
-		e.printStackTrace();
-	}
-	finally {
-		scanner.close();
-	}*/
-	// Loading the File using FileInputStream
+	String fname="d:\\temp\\Readme.txt";
 	try
     {
       fin = new FileInputStream(fname);      

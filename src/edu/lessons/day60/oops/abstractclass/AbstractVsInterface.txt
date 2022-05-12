@@ -1,0 +1,17 @@
+Differences between Abstract class and Interface
+
+Abstract Class:
+	Can have concrete methods
+	Can have constructors
+	A class can only extend from one base class {or} one abstract class
+	i.e A child class can not extend from 2 or more abstract class
+	When a child class is instantiated, then the parent abstract class will also be
+	instantiated
+	Must be extended
+	
+Interface:
+	Can not have concrete methods
+	Can not have constructors
+	A class can implement from multiple interfaces
+	When the implementer class is instantiated the interface is not instantiated
+	Must be implemented

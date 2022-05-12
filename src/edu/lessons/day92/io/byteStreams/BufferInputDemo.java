@@ -6,7 +6,7 @@ public class BufferInputDemo
 {
 	public static void main(String arg[])   
 	{
-		String s="99% is  &approx equal  to 100 but this is &approx; not.";
+		String s="99% is  &approx equal  to 100 but this is &approx; not equal to 95";
 		byte buf[]=s.getBytes();
 		ByteArrayInputStream in=new ByteArrayInputStream(buf);
 		BufferedInputStream f=new BufferedInputStream(in);
@@ -22,6 +22,8 @@ public class BufferInputDemo
 			ex.printStackTrace();
 		}
 	}
+	
+	
 	public static void m2()throws IOException 
 	{
 		String s="99% is  &approx equal  to 100 but this is"+

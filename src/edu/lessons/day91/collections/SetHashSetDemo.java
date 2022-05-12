@@ -10,70 +10,63 @@ class SetHashSetDemo
   }
   public static void demoA()
   {
-	    HashSet<String> hs = new HashSet<String>();
-	    hs.add("Bee"); 
-	    hs.add("Apple");  
-	    hs.add("Doll");	
-	    hs.add(null);
-	    hs.add("Egg");
-	    hs.add("Cinema");
-	    hs.add("Fan");	    
-	    System.out.println("Size "+hs.size());
-	    hs.add("Fan");//ignore
-	    hs.add(null);//ignore
-	    System.out.println("Size "+hs.size());
-	    System.out.println(hs);
-	    Iterator<String> itr = hs.iterator();
-		 while(itr.hasNext())
-		 {
-		      Object element = itr.next();
-		      System.out.println(element + "-");
+	  HashSet<String> string_hs = new HashSet<String>();
+	    string_hs.add("Bee"); 
+	    string_hs.add("Apple");  
+	    string_hs.add("Doll");	
+	    string_hs.add(null);
+	    string_hs.add("Egg");
+	    string_hs.add("Cinema");
+	    string_hs.add("Fan");	    
+	    System.out.println("Size "+string_hs.size());
+	    string_hs.add("Fan");//ignore
+	    string_hs.add(null);//ignore
+	    System.out.println("Size "+string_hs.size());    
+	    Iterator<String> set_itr = string_hs.iterator();
+		 while(set_itr.hasNext())
+		 {		    
+		      System.out.print(set_itr.next() + "-");
 		 }
-		System.out.println();
   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   public static void demoB()
   {
-     HashSet<Employee> hs = new HashSet<Employee>();
-	  Employee e1=null;
+     HashSet<Emp> hs = new HashSet<Emp>();
+	  Emp e1=null;
 	  for(int i=0;i<10;i++)
 	  {
-		  e1=new Employee();
-		  e1.Id =i;
+		  e1=new Emp(i);
 		  e1.Name="Emp "+i;
 		  hs.add(e1);		 
-	  }
-	  
+	  }	  
 	  System.out.println("Count "+hs.size());
-	  hs.add(e1);
-	  System.out.println("Count "+hs.size());
-	  
-     Iterator itr = hs.iterator();
+	  e1 = new Emp(9);
+	  hs.add(e1); // does not add duplicate object. ignore
+	  System.out.println("Count "+hs.size());	  
+     Iterator<Emp> itr = hs.iterator();
      while(itr.hasNext())
      {
-      Object element = itr.next();
-	  Employee e2=(Employee)element;
-      System.out.println(e2.Id + " "+e2.Name+" "+e2.hashCode());
-     }
-     
-     System.out.println("======");
-     itr = hs.iterator();
-     Object obj = itr.next();
-	 Employee e3=(Employee)obj;
-	 System.out.println(e3.Id + " "+e3.Name+" "+e3.hashCode());
-	 e3.Id=5; e3.Name="Emp 5";
-	 
-	 e1=e3;
-	 
-	 System.out.println("*******");
-	 itr = hs.iterator();
-     while(itr.hasNext())
-     {
-      Object element = itr.next();
-	  Employee e2=(Employee)element;
-      System.out.println(e2.Id + " "+e2.Name+" "+e2.hashCode());
-     }
+	  Emp e2=itr.next();
+      System.out.println(e2.getID() + " "+e2.Name);
+     }  
+    
   }
+  
+  
+  
+  
   public static void demoC()
   {
      HashSet hs = new HashSet();

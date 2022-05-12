@@ -13,13 +13,13 @@ public class DateDemoA
 	}	
 	public static void displayCurrentDate()
 	{
-		Calendar cal = Calendar.getInstance();// factory method
-		Date date = cal.getTime();
+		Calendar vCalendar = Calendar.getInstance();// factory method
+		Date date = vCalendar.getTime();
 		try
 		{
 			System.out.println(date);
-			SimpleDateFormat f1=new SimpleDateFormat("yyyy-MMM-dd");
-		    System.out.println(f1.format(date));
+			SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy-MMM-dd");
+		    System.out.println(dateFormat.format(date));
 		    SimpleDateFormat f2=new SimpleDateFormat("EEEE",Locale.ENGLISH);
 		    System.out.println(f2.format(date));
 		} catch (Exception e1) 
@@ -32,16 +32,17 @@ public class DateDemoA
 	{
 		Scanner sc= new java.util.Scanner(System.in);
 		System.out.println("Enter your DOB:(yyyy-mm-dd) ");
-		String dob= sc.nextLine();
+		String dobString= sc.nextLine();
 		sc.close();
-		int year = Integer.parseInt(dob.substring(0, 4));
-		int month = Integer.parseInt(dob.substring(5, 7))-1;
-		int day = Integer.parseInt(dob.substring(8,10));
+		int year = Integer.parseInt(dobString.substring(0, 4));
+		int month = Integer.parseInt(dobString.substring(5, 7))-1;
+		int day = Integer.parseInt(dobString.substring(8,10));
 		System.out.println(year+"-"+month+"-"+day);
+		
 		Calendar date = new GregorianCalendar(year,month,day);
-		Date d1=date.getTime();
+		Date dob=date.getTime();
 		SimpleDateFormat f1=new SimpleDateFormat("yyyy-MMM-dd");
-		System.out.println("DOB "+f1.format(d1));
+		System.out.println("DOB "+f1.format(dob));
 	}
 	
 	public static void displayDOBA()
@@ -85,7 +86,7 @@ public class DateDemoA
 		int days=currentCalendar.get(Calendar.DATE)-
 				dobCalendar.get(Calendar.DATE);
 		System.out.println("Age days "+days);
-		Calendar ageCalender=new GregorianCalendar(years,months,days);
-		System.out.println("Age "+f1.format(ageCalender.getTime()));
+		Calendar ageCalendar=new GregorianCalendar(years,months,days);
+		System.out.println("Age "+f1.format(ageCalendar.getTime()));
 	}
 }

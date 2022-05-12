@@ -1,7 +1,14 @@
 package edu.lessons.day92.io.file;
 import java.io.OutputStream;
 import java.io.FileOutputStream;
-
+/**
+ * 
+ * @author Chainsys
+ * Programs use byte streams to perform input and output of 8-bit bytes. 
+ * All byte stream classes are descended from InputStream and OutputStream.
+ * To demonstrate how byte streams work, 
+ * we'll focus on the file I/O byte streams, FileInputStream and FileOutputStream. 
+ */
 public class FileOutputStreamDemo
 {
   public static void main(String args[])

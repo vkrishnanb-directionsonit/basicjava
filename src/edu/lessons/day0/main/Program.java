@@ -1,13 +1,10 @@
 package edu.lessons.day0.main;
-
-import edu.lessons.day38.arrays.BubbleSortingArray;
-
 // int x=100; illegal
 public class Program {// beginning of a class
 
 	public static void main(String[] args) 
 	{//beginning of a method
-		
+		System.Out.println("Hello");
 	}//end of main
 
 }//end of a class
